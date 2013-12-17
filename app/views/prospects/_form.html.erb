@@ -1,8 +1,20 @@
 
-<%= form_tag(prospects_path) do  %>
-  Annual Income  <%= text_field_tag :annual_income %><br><br>
-  Current Savings <%= text_field_tag :current_savings %><br><br>
-  Retirement Savings <%= text_field_tag :retirement_savings %><br><br>
-  <%= submit_tag "Submit" %><br>
-<% end %>
+<div id="prospect-form">
+  <h1 class="call-to">Income & Savings First...</h1>
+  
+  <%= form_tag(prospects_path) do  %>
+
+    Total Annual Income  <%= text_field_tag :annual_income %> <br><br>
+
+    Savings <%= text_field_tag :current_savings %> <br><br>
+
+    Saved for Retirement?<%= text_field_tag :retirement_savings %> <br><br>
+    
+    <%= submit_tag "Submit" %><br>
+
+  <% end %>
+
+  <h2 class="call-to"><%= @prospect.recommended_insurance if @prospect.recommended_insurance  %></h2>
+
+</div>
 
