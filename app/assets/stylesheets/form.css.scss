@@ -1,10 +1,18 @@
 /*-------FORM--------*/
 
 .call-to{
-  color: white;
+  color: rgb(255,255,255);
+  margin-bottom: 8%;
 }
 
 #prospect-form{
-  border: solid black 1px;
-  margin: auto 0;
+  margin-top: 12%
+}
+
+#prospect-form h3{
+  color: rgb(255,255,255);
+}
+
+#prospect-btn{
+  color: rgb(244,134,89);
 }

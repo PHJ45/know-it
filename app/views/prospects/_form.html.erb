@@ -1,20 +1,34 @@
 
-<div id="prospect-form">
-  <h1 class="call-to">Income & Savings First...</h1>
-  
-  <%= form_tag(prospects_path) do  %>
+<div id="prospect-form" class="col-md-6 col-md-offset-3">
+   <%= form_tag(prospects_path)  do   %>
+    <h1 class="call-to">Income & Savings First...</h1>
 
-    Total Annual Income  <%= text_field_tag :annual_income %> <br><br>
+    <h3>Total Annual Income?</h3>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon">$</span>
+        <input type="text" id="annual_income" name="annual_income" class="form-control" required autofocus>
+    </div>
 
-    Savings <%= text_field_tag :current_savings %> <br><br>
+    <h3>Savings</h3>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon">$</span>
+      <input type="text" name="current_savings" class="form-control" required autofocus>
+    </div>
 
-    Saved for Retirement?<%= text_field_tag :retirement_savings %> <br><br>
+    <h3>Saved for Retirement?</h3>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon">$</span>
+      <input type="text" name="retirement_savings" class="form-control" required autofocus>
+    </div>
     
-    <%= submit_tag "Submit" %><br>
+    <br> 
+    
+    <button class="btn btn-default" id="prospect-btn" type="submit">Submit</button>
+  <% end %>  
 
-  <% end %>
+  <h3 class="call-to"> You should get 
 
-  <h2 class="call-to"><%= @prospect.recommended_insurance if @prospect.recommended_insurance  %></h2>
-
-</div>
+  $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
+  </h3>
+</div> <!--END OF PROSPECT FORM  -->
 
