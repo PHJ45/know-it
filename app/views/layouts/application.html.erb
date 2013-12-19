@@ -8,13 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 </head>
   <body>
-  <div class="wrapper">
-    <div class="container">
-      <div class = "row">
-      <%= yield %>
+
+    <nav class="pushy pushy-left">
+      <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+      </ul>
+    </nav>
+    
+    <div class="site-overlay"></div><!-- Site Overlay -->
+
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <%= yield %>
+        </div>
       </div>
     </div>
-    </div>
+
+
   </body>
 </html>
 

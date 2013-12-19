@@ -11,8 +11,20 @@
 
 #prospect-form h3{
   color: rgb(255,255,255);
+  display: inline-block; 
 }
 
 #prospect-btn{
-  color: rgb(244,134,89);
+  background-color: rgb(244,134,89);
+  color: rgb(255,255,255);
+  border: white solid 2px;
+}
+
+#prospect-btn:hover{
+  background-color: rgb(241,104,47);
+}
+
+.menu-btn{
+  color: rgba(255,255,255,.5);
+  margin-left: 20px;
 }

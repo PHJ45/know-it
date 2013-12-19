@@ -3,19 +3,30 @@
    <%= form_tag(prospects_path)  do   %>
     <h1 class="call-to">Income & Savings First...</h1>
 
-    <h3>Total Annual Income?</h3>
-    <div class="input-group input-group-lg">
-      <span class="input-group-addon">$</span>
-        <input type="text" id="annual_income" name="annual_income" class="form-control" required autofocus>
+    <div class="prospect-form">
+      <h3>Total Annual Income?
+        <span class="menu-btn glyphicon glyphicon-question-sign">
+        </span>
+      </h3>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">$</span>
+          <input type="text" id="annual_income" name="annual_income" class="form-control" required autofocus>
+      </div>
     </div>
 
-    <h3>Savings</h3>
+    <h3>Savings
+      <span class="menu-btn glyphicon glyphicon-question-sign">
+      </span>
+    </h3>
     <div class="input-group input-group-lg">
       <span class="input-group-addon">$</span>
       <input type="text" name="current_savings" class="form-control" required autofocus>
     </div>
 
-    <h3>Saved for Retirement?</h3>
+    <h3>Saved for Retirement?
+      <span class="menu-btn glyphicon glyphicon-question-sign">
+      </span>
+    </h3>
     <div class="input-group input-group-lg">
       <span class="input-group-addon">$</span>
       <input type="text" name="retirement_savings" class="form-control" required autofocus>
@@ -23,12 +34,17 @@
     
     <br> 
     
-    <button class="btn btn-default" id="prospect-btn" type="submit">Submit</button>
+    <button class="btn btn-default btn-lg" id="prospect-btn" type="submit"> Submit
+    </button>
   <% end %>  
+  <br>
+  <div class="recomendation">
+    
+  
+    <h3 class="call-to"> 
+    You should get $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
+    </h3>
+  </div>
 
-  <h3 class="call-to"> You should get 
-
-  $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
-  </h3>
 </div> <!--END OF PROSPECT FORM  -->
 
