@@ -16,12 +16,6 @@
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 }
 
-
-.pushy a:hover{
-    background: #00b4ff;
-    color: #FFF;
-}
-
 /* Menu Movement */
 
 .pushy-left{

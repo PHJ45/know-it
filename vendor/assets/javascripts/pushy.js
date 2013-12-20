@@ -46,6 +46,7 @@ $(function() {
 		//close menu when clicking site overlay
 		siteOverlay.click(function(){ 
 			togglePushy();
+			$('.wrapper').css('background-color','rgb(46,204,204');
 		});
 	}else{
 		//jQuery fallback

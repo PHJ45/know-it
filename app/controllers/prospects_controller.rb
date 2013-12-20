@@ -10,7 +10,7 @@ class ProspectsController < ApplicationController
     @prospect.current_savings = sanitize(params[:current_savings])
     @prospect.retirement_savings = sanitize(params[:retirement_savings])
     @prospect.save
-    render'new'
+    render 'new'
   end
 
   private

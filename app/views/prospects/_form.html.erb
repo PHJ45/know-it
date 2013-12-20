@@ -38,14 +38,13 @@
     </button>
   <% end %>  
   <br>
-  <div class="recomendation">
-    
+
+  <div class="recomendation">  
     <% unless @prospect.recommended_insurance.nil? %>
       <h3 class="call-to" id="recomendation-text"> 
       You should get $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
       </h3>
     <% end %>
-
   </div>
 
 </div> <!--END OF PROSPECT FORM  -->
