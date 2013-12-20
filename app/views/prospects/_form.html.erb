@@ -5,7 +5,7 @@
 
     <div class="prospect-form">
       <h3>Total Annual Income?
-        <span class="menu-btn glyphicon glyphicon-question-sign">
+        <span class="menu-btn glyphicon glyphicon-question-sign" id="income">
         </span>
       </h3>
       <div class="input-group input-group-lg">
@@ -15,7 +15,7 @@
     </div>
 
     <h3>Savings
-      <span class="menu-btn glyphicon glyphicon-question-sign">
+      <span class="menu-btn glyphicon glyphicon-question-sign" id="savings">
       </span>
     </h3>
     <div class="input-group input-group-lg">
@@ -24,7 +24,7 @@
     </div>
 
     <h3>Saved for Retirement?
-      <span class="menu-btn glyphicon glyphicon-question-sign">
+      <span class="menu-btn glyphicon glyphicon-question-sign" id="retirement">
       </span>
     </h3>
     <div class="input-group input-group-lg">
@@ -40,9 +40,11 @@
   <br>
   <div class="recomendation">
     
-    <h3 class="call-to" id="recomendation-text"> 
-    You should get $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
-    </h3>
+    <% unless @prospect.recommended_insurance.nil? %>
+      <h3 class="call-to" id="recomendation-text"> 
+      You should get $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
+      </h3>
+    <% end %>
 
   </div>
 
