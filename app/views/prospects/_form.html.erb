@@ -3,20 +3,18 @@
    <%= form_tag(prospects_path)  do   %>
     <h1 class="call-to">Income & Savings First...</h1>
 
-    <div class="prospect-form">
-      
-      <div class ="fade-form">
-        <h3>Total Annual Income?
-          <span class="menu-btn glyphicon glyphicon-question-sign" id="income">
-          </span>
-        </h3>
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon">$</span>
-            <input type="text" id="annual_income" name="annual_income" class="form-control" required autofocus>
-        </div>
+    <div class ="fade-form">
+      <h3>Total Annual Income?
+        <span class="menu-btn glyphicon glyphicon-question-sign" id="income">
+        </span>
+      </h3>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">$</span>
+          <input type="text" id="annual_income" name="annual_income" class="form-control" required autofocus>
       </div>
+    </div>
 
-  <div class="fade-form">
+  <div class="fade-form fade-form-first">
     <h3>Savings
       <span class="menu-btn glyphicon glyphicon-question-sign" id="savings">
       </span>
@@ -27,7 +25,7 @@
     </div>
   </div>
 
-  <div class="fade-form">
+  <div class="fade-form fade-form-first">
     <h3>Saved for Retirement?
       <span class="menu-btn glyphicon glyphicon-question-sign" id="retirement">
       </span>
@@ -40,7 +38,8 @@
     
     <br> 
     
-    <button class="btn btn-default btn-lg" id="prospect-btn" type="submit"> Submit
+    <button class="btn btn-default btn-lg" id="prospect-btn" type="submit"> 
+      Submit
     </button>
   <% end %>  
 
@@ -51,6 +50,5 @@
       </h3>
     <% end %>
   </div>
-
 </div> <!--END OF PROSPECT FORM  -->
 
