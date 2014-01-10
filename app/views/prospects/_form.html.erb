@@ -39,10 +39,10 @@
   <% end %>  
 
   <div class="recomendation">  
-    <% unless @prospect.recommended_insurance.nil? %>
-      <h3 class="call-to" id="recomendation-text"> 
-      You should get $<%= number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') if number_with_delimiter(@prospect.recommended_insurance, :delimiter => ',') %> in life insurance.
-      </h3>
+  <% unless @prospect.recommended_insurance.nil? %>
+    <h3 class="call-to" id="recomendation-text"> 
+    You should get <%= number_to_currency(@prospect.recommended_insurance) %>
+    </h3>
     <% end %>
   </div>
 
